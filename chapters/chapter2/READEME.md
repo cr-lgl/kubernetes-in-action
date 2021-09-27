@@ -304,8 +304,11 @@ alias k=kubectl
 
 2. kubectl의 탭 완성 설정하기
 
+https://kubernetes.io/docs/tasks/tools/included/optional-kubectl-configs-zsh/
+
 ```
-source <(kubectl completion zsh | sed s/kubectl/k/g)
+echo 'source <(kubectl completion zsh)' >>~/.zshrc
+echo 'complete -F __start_kubectl k' >>~/.zshrc
 ```
 
 위 명령어를 실행하면 kubectl 탭 자동 완성을 할 수 있다.
